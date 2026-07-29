@@ -1,0 +1,11 @@
+import { ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { useEffect } from 'react'
+import { createPortal } from 'react-dom'
+import type { GalleryItem } from '../../types/index.ts'
+
+export function ImageViewer({ items, index, onChange, onClose }: { items: GalleryItem[]; index: number | null; onChange: (index: number) => void; onClose: () => void }) {
+  useEffect(() => { if (index === null) return; const handler = (event: KeyboardEvent) => { if (event.key === 'Escape') onClose(); if (event.key === 'ArrowRight') onChange((index + 1) % items.length); if (event.key === 'ArrowLeft') onChange((index - 1 + items.length) % items.length) }; document.addEventListener('keydown', handler); document.body.style.overflow = 'hidden'; return () => { document.removeEventListener('keydown', handler); document.body.style.overflow = '' } }, [index, items.length, onChange, onClose])
+  if (index === null) return null
+  const item = items[index]
+  return createPortal(<div className="fixed inset-0 z-[100] flex items-center justify-center bg-movement-navy/90 p-4" role="dialog" aria-modal="true" aria-label={item.title}><button type="button" onClick={onClose} aria-label="Close image viewer" className="absolute right-5 top-5 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-blaze-orange"><X size={20} /></button><button type="button" onClick={() => onChange((index - 1 + items.length) % items.length)} aria-label="Previous image" className="absolute left-4 top-1/2 inline-flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white hover:bg-blaze-orange"><ChevronLeft size={23} /></button><figure className="max-w-5xl"><img src={item.image.src} alt={item.image.alt} className="max-h-[78vh] w-auto rounded-2xl object-contain" /><figcaption className="mt-4 text-center text-sm text-white/75">{item.title} <span className="text-white/40">· {index + 1} / {items.length}</span></figcaption></figure><button type="button" onClick={() => onChange((index + 1) % items.length)} aria-label="Next image" className="absolute right-4 top-1/2 inline-flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white hover:bg-blaze-orange"><ChevronRight size={23} /></button></div>, document.body)
+}
