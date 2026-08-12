@@ -86,8 +86,8 @@ export const quickActions: QuickAction[] = [
 ]
 
 export const presidentImage: HomeImage = {
-  src: 'https://images.pexels.com/photos/4997539/pexels-photo-4997539.jpeg?auto=compress&cs=tinysrgb&w=1000',
-  alt: 'Hassan Shoots on Pexels — Indian community leader in a white kurta',
+  src: '/confrence.png',
+  alt: 'Bharatiya Mitra Party conference gathering',
 }
 
 export const homeUpdates: HomeUpdate[] = [

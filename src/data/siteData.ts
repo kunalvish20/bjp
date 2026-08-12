@@ -34,7 +34,7 @@ export const heroSlides = [
 ]
 
 export const events: EventItem[] = [
-  { id: 'e1', title: 'Jan Samvaad: Listening tour', date: '2026-08-02', time: '10:00 AM', location: 'Ramlila Maidan, New Delhi', type: 'Public meeting' },
+  { id: 'e1', title: 'Jan Samvaad: Listening tour', date: '2026-08-05', time: '10:00 AM', location: 'Ramlila Maidan, New Delhi', type: 'Public meeting' },
   { id: 'e2', title: 'Youth policy lab', date: '2026-08-10', time: '4:00 PM', location: 'Bengaluru & online', type: 'Workshop' },
   { id: 'e3', title: 'Nagrik fellowship orientation', date: '2026-08-18', time: '11:30 AM', location: 'Pune Civic Centre', type: 'Orientation' },
 ]

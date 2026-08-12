@@ -10,15 +10,19 @@ export function HomeHero() {
 
   return (
     <section className="relative overflow-hidden bg-party-forest text-white" aria-label="Bharatiya Mitra Party campaign highlights">
-      <img src="/Banner_image.png" alt="Bharatiya Mitra Party banner" width="1800" height="900" className="absolute inset-0 h-full w-full object-cover object-top" />
-      <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(0,60,36,0.96)_0%,rgba(0,60,36,0.78)_45%,rgba(0,60,36,0.2)_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-44 bg-gradient-to-t from-party-forest/80 to-transparent" />
+      <picture className="absolute inset-0">
+        <source media="(max-width: 639px)" srcSet="/Bmp.png" />
+        <img src="/Banner_image.png" alt="Bharatiya Mitra Party banner" width="1800" height="900" className="h-full w-full object-cover object-top" />
+      </picture>
+      <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(0,60,36,0.32)_0%,rgba(0,60,36,0.2)_48%,rgba(0,60,36,0.5)_100%)] sm:hidden" />
+      <div className="pointer-events-none absolute inset-0 z-10 hidden bg-[linear-gradient(90deg,rgba(0,60,36,0.96)_0%,rgba(0,60,36,0.78)_45%,rgba(0,60,36,0.2)_100%)] sm:block" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-44 bg-gradient-to-t from-party-forest/45 to-transparent sm:from-party-forest/80" />
       <div className="page-container relative z-20 flex min-h-[33rem] flex-col justify-end pb-14 pt-28 sm:min-h-[39rem] sm:pb-16">
         <Reveal className="max-w-2xl">
           <span className="eyebrow text-white">{slide.kicker}</span>
           <h1 className="mt-5 max-w-2xl font-body text-5xl font-black leading-[0.98] tracking-[-0.06em] sm:text-7xl lg:text-[5.7rem]">{slide.title}<span className="block text-party-saffron">{slide.highlight}</span></h1>
           <p className="mt-5 max-w-lg text-base font-bold leading-7 text-white/80 sm:text-lg">{slide.description}</p>
-          <div className="mt-7 flex flex-wrap gap-3"><ButtonLink to="/join" icon={undefined}>Join Our Party</ButtonLink><ButtonLink to="/about" variant="outline" icon={undefined}>Read Our Story</ButtonLink></div>
+          <div className="mt-7 flex flex-wrap gap-3"><ButtonLink to="/join" icon={undefined}>Join Our Party</ButtonLink><ButtonLink to="/donate" variant="outline" icon={undefined}>Fund Our Party</ButtonLink></div>
         </Reveal>
       </div>
     </section>
@@ -28,8 +32,19 @@ export function HomeHero() {
 export function QuickActions() {
   return (
     <section className="relative z-20 -mt-1 border-b border-party-line bg-white shadow-[0_8px_18px_rgba(0,60,36,0.08)]">
-      <div className="page-container no-scrollbar grid grid-cols-2 divide-x divide-y divide-party-line overflow-x-auto sm:grid-cols-4 lg:grid-cols-8 lg:divide-y-0">
-        {quickActions.map(({ label, hindi, to, icon: Icon }) => <Link key={label} to={to} className="group flex min-w-[9rem] flex-col items-center justify-center gap-2 px-3 py-4 text-center transition hover:bg-party-cream"><Icon aria-hidden="true" size={22} strokeWidth={1.7} className="text-party-green transition group-hover:text-party-saffron" /><span className="text-[0.68rem] font-black leading-tight text-party-forest">{label}<span className="block mt-0.5 text-[0.6rem] font-medium text-party-ink/55">{hindi}</span></span></Link>)}
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-white to-transparent sm:hidden" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-white to-transparent sm:hidden" />
+      <div className="no-scrollbar overflow-hidden py-2.5 sm:hidden">
+        <div className="quick-actions-marquee flex w-max gap-2.5 px-4">
+          {[...quickActions, ...quickActions].map(({ label, hindi, to, icon: Icon }, index) => {
+            const duplicate = index >= quickActions.length
+
+            return <Link key={`${label}-${index}`} to={to} aria-hidden={duplicate ? 'true' : undefined} tabIndex={duplicate ? -1 : undefined} className="group flex h-[5.6rem] w-[8.35rem] shrink-0 flex-col items-center justify-center gap-1.5 rounded-[0.4rem] border border-party-line bg-white px-2.5 text-center shadow-[0_5px_13px_rgba(0,60,36,0.07)] transition active:scale-[0.98]"><span className="flex h-8 w-8 items-center justify-center rounded-full bg-party-cream text-party-green transition group-active:bg-party-saffron group-active:text-white"><Icon aria-hidden="true" size={18} strokeWidth={1.8} /></span><span className="text-[0.63rem] font-black leading-tight text-party-forest">{label}<span className="mt-0.5 block text-[0.55rem] font-medium leading-tight text-party-ink/55">{hindi}</span></span></Link>
+          })}
+        </div>
+      </div>
+      <div className="page-container hidden sm:grid sm:grid-cols-4 sm:divide-x sm:divide-y sm:divide-party-line lg:grid-cols-8 lg:divide-y-0">
+        {quickActions.map(({ label, hindi, to, icon: Icon }) => <Link key={label} to={to} className="group flex flex-col items-center justify-center gap-2 px-3 py-4 text-center transition duration-200 hover:bg-party-cream"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-party-cream text-party-green transition group-hover:bg-party-saffron group-hover:text-white"><Icon aria-hidden="true" size={21} strokeWidth={1.8} /></span><span className="text-[0.68rem] font-black leading-tight text-party-forest">{label}<span className="block mt-0.5 text-[0.6rem] font-medium text-party-ink/55">{hindi}</span></span></Link>)}
       </div>
     </section>
   )

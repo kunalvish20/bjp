@@ -58,9 +58,17 @@
   .text-balance { text-wrap: balance; }
   .no-scrollbar { scrollbar-width: none; }
   .no-scrollbar::-webkit-scrollbar { display: none; }
+  .quick-actions-marquee { animation: quick-actions-marquee 24s linear infinite; }
+  .quick-actions-marquee:active { animation-play-state: paused; }
+}
+
+@keyframes quick-actions-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 0.3125rem)); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+  .quick-actions-marquee { animation: none !important; }
 }
