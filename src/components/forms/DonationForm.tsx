@@ -19,8 +19,8 @@ export function DonationForm() {
   return (
     <div className="rounded-3xl border border-border bg-white p-6 md:p-8">
       <div className="mb-8 flex gap-2 rounded-xl bg-civic-white p-1.5 shadow-inner">
-        <button onClick={() => setPayMethod('card')} className={`flex-1 rounded-lg py-2.5 text-sm font-bold transition-all ${payMethod === 'card' ? 'bg-white text-movement-navy shadow-sm' : 'text-slate hover:text-movement-navy'}`}>Online Payment</button>
-        <button onClick={() => setPayMethod('qr')} className={`flex-1 rounded-lg py-2.5 text-sm font-bold transition-all ${payMethod === 'qr' ? 'bg-white text-movement-navy shadow-sm' : 'text-slate hover:text-movement-navy'}`}>Scan QR (UPI)</button>
+        <button type="button" onClick={() => setPayMethod('card')} className={`flex-1 rounded-lg py-2.5 text-sm font-bold transition-all ${payMethod === 'card' ? 'bg-white text-movement-navy shadow-sm' : 'text-slate hover:text-movement-navy'}`}>Online Payment</button>
+        <button type="button" onClick={() => setPayMethod('qr')} className={`flex-1 rounded-lg py-2.5 text-sm font-bold transition-all ${payMethod === 'qr' ? 'bg-white text-movement-navy shadow-sm' : 'text-slate hover:text-movement-navy'}`}>Scan QR (UPI)</button>
       </div>
 
       {payMethod === 'card' ? (

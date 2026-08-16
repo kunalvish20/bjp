@@ -52,6 +52,13 @@
   .section-rule { border-top: 1px solid var(--color-party-line); }
   .paper-grid { background-image: linear-gradient(to right, rgba(0, 60, 36, 0.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 60, 36, 0.035) 1px, transparent 1px); background-size: 2.5rem 2.5rem; }
   .tricolor-rule { height: 4px; background: linear-gradient(90deg, var(--color-party-saffron) 0 33.33%, white 33.33% 66.66%, var(--color-party-green) 66.66%); }
+  [lang='hi'] { font-family: 'Noto Sans Devanagari', var(--font-body); letter-spacing: 0; }
+  .bilingual-copy { display: inline-flex; align-items: baseline; flex-wrap: wrap; gap: 0.15em 0.45em; max-width: 100%; vertical-align: baseline; }
+  .bilingual-hi { font-family: 'Noto Sans Devanagari', var(--font-body); font-size: 0.92em; letter-spacing: 0; opacity: 0.82; }
+  .bilingual-hi::before { color: currentColor; content: '/'; font-family: var(--font-body); margin-right: 0.45em; opacity: 0.45; }
+  h1 .bilingual-copy, h2 .bilingual-copy, h3 .bilingual-copy, .display-heading .bilingual-copy { flex-wrap: wrap; gap: 0.25em 0.45em; }
+  h1 .bilingual-hi, h2 .bilingual-hi, h3 .bilingual-hi, .display-heading .bilingual-hi { display: inline; font-size: 0.78em; line-height: 1.15; }
+  .eyebrow .bilingual-copy, button .bilingual-copy, a .bilingual-copy { flex-wrap: wrap; justify-content: inherit; }
 }
 
 @layer utilities {
@@ -60,6 +67,7 @@
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .quick-actions-marquee { animation: quick-actions-marquee 24s linear infinite; }
   .quick-actions-marquee:active { animation-play-state: paused; }
+  .border-b.border-white\/15.pb-4 { margin-top: 10px; }
 }
 
 @keyframes quick-actions-marquee {

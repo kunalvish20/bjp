@@ -41,24 +41,24 @@ export interface ExploreCard {
 export const heroSlides: HeroSlide[] = [
   {
     id: 'together',
-    kicker: 'भारत के लिए, भारत के साथ',
+    kicker: 'For India, with India',
     title: 'Together for',
     highlight: 'Development & Unity',
-    description: 'विकास भी, विश्वास भी — a party for people, by people.',
+    description: 'Development with trust - a party for people, by people.',
     image: {
       src: 'https://images.unsplash.com/photo-1695042849689-f682ec337576?auto=format&fit=crop&w=1800&q=85',
-      alt: 'Prakhar Sharma on Unsplash — Indian tricolour flags rising over a public gathering',
+      alt: 'Prakhar Sharma on Unsplash - Indian tricolour flags rising over a public gathering',
     },
   },
   {
     id: 'people',
-    kicker: 'जनता की आवाज़, देश की ताकत',
+    kicker: 'जनता की आवाज, देश की ताकत',
     title: 'A stronger India',
     highlight: 'starts with us.',
     description: 'We listen, we serve, and we build together in every neighbourhood.',
     image: {
       src: 'https://images.unsplash.com/photo-1632261811725-4697edf73a48?auto=format&fit=crop&w=1800&q=85',
-      alt: 'Rupinder Singh on Unsplash — people carrying flags together at a public rally',
+      alt: 'Rupinder Singh on Unsplash - people carrying flags together at a public rally',
     },
   },
   {
@@ -69,7 +69,7 @@ export const heroSlides: HeroSlide[] = [
     description: 'Join a transparent, inclusive movement working for every Indian family.',
     image: {
       src: 'https://images.unsplash.com/photo-1660855642625-709a93302f21?auto=format&fit=crop&w=1800&q=85',
-      alt: 'Graphic Gears on Unsplash — a person holding an Indian flag above a city',
+      alt: 'Graphic Gears on Unsplash - a person holding an Indian flag above a city',
     },
   },
 ]
@@ -98,7 +98,7 @@ export const homeUpdates: HomeUpdate[] = [
     type: 'Latest News',
     image: {
       src: 'https://images.pexels.com/photos/16136353/pexels-photo-16136353.jpeg?auto=compress&cs=tinysrgb&w=900',
-      alt: 'Sandeep Kashyap on Pexels — people gathering with Indian flags',
+      alt: 'Sandeep Kashyap on Pexels - people gathering with Indian flags',
     },
     to: '/news',
   },
@@ -109,7 +109,7 @@ export const homeUpdates: HomeUpdate[] = [
     type: 'Upcoming Event',
     image: {
       src: 'https://images.pexels.com/photos/8819342/pexels-photo-8819342.jpeg?auto=compress&cs=tinysrgb&w=900',
-      alt: 'Yan Krukau on Pexels — diverse people meeting together',
+      alt: 'Yan Krukau on Pexels - diverse people meeting together',
     },
     to: '/events',
   },
@@ -120,7 +120,7 @@ export const homeUpdates: HomeUpdate[] = [
     type: 'Photo Gallery',
     image: {
       src: 'https://images.unsplash.com/photo-1704703337823-d9165d05be13?auto=format&fit=crop&w=900&q=80',
-      alt: 'Abdul Ridwan on Unsplash — a public meeting at dusk',
+      alt: 'Abdul Ridwan on Unsplash - a public meeting at dusk',
     },
     to: '/gallery',
   },
@@ -132,16 +132,16 @@ export const exploreCards: ExploreCard[] = [
     hindi: 'पार्टी से जुड़ें',
     image: {
       src: 'https://images.pexels.com/photos/5029923/pexels-photo-5029923.jpeg?auto=compress&cs=tinysrgb&w=800',
-      alt: 'Anna Shvets on Pexels — volunteers planting a tree together',
+      alt: 'Anna Shvets on Pexels - volunteers planting a tree together',
     },
     to: '/join',
   },
   {
     title: 'Social Activities',
-    hindi: 'सामाजिक गतिविधियाँ',
+    hindi: 'सामाजिक गतिविधियां',
     image: {
       src: 'https://images.pexels.com/photos/6646770/pexels-photo-6646770.jpeg?auto=compress&cs=tinysrgb&w=800',
-      alt: 'RDNE Stock project on Pexels — a diverse volunteer group working together',
+      alt: 'RDNE Stock project on Pexels - a diverse volunteer group working together',
     },
     to: '/about',
   },
@@ -150,7 +150,7 @@ export const exploreCards: ExploreCard[] = [
     hindi: 'सहयोग करें',
     image: {
       src: 'https://images.pexels.com/photos/10905774/pexels-photo-10905774.jpeg?auto=compress&cs=tinysrgb&w=800',
-      alt: 'Atlantic Ambience on Pexels — hands holding a red heart',
+      alt: 'Atlantic Ambience on Pexels - hands holding a red heart',
     },
     to: '/donate',
   },
@@ -159,16 +159,16 @@ export const exploreCards: ExploreCard[] = [
     hindi: 'हमारे कार्यालय',
     image: {
       src: 'https://images.pexels.com/photos/36926207/pexels-photo-36926207.jpeg?auto=compress&cs=tinysrgb&w=800',
-      alt: 'Deekshith Rao on Pexels — modern civic office architecture',
+      alt: 'Deekshith Rao on Pexels - modern civic office architecture',
     },
     to: '/offices',
   },
   {
     title: 'Achievements',
-    hindi: 'उपलब्धियाँ',
+    hindi: 'उपलब्धियां',
     image: {
       src: 'https://images.pexels.com/photos/10435675/pexels-photo-10435675.jpeg?auto=compress&cs=tinysrgb&w=800',
-      alt: 'Josiah Matthew on Pexels — a golden trophy on a decorated stage',
+      alt: 'Josiah Matthew on Pexels - a golden trophy on a decorated stage',
     },
     to: '/news',
   },
@@ -177,7 +177,7 @@ export const exploreCards: ExploreCard[] = [
     hindi: 'हमसे जुड़ें',
     image: {
       src: 'https://images.pexels.com/photos/7787287/pexels-photo-7787287.jpeg?auto=compress&cs=tinysrgb&w=800',
-      alt: 'Ravi Roshan on Pexels — a person holding a smartphone with social apps',
+      alt: 'Ravi Roshan on Pexels - a person holding a smartphone with social apps',
     },
     to: '/contact',
   },
