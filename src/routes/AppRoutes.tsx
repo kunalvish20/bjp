@@ -16,6 +16,7 @@ const NewsDetail = lazy(() => import('../pages/NewsDetail.tsx'))
 const Events = lazy(() => import('../pages/Events.tsx'))
 const Gallery = lazy(() => import('../pages/Gallery.tsx'))
 const Manifesto = lazy(() => import('../pages/Manifesto.tsx'))
+const SankalpPatra = lazy(() => import('../pages/SankalpPatra.tsx'))
 const PublicIssues = lazy(() => import('../pages/PublicIssues.tsx'))
 const Donate = lazy(() => import('../pages/Donate.tsx'))
 const Contact = lazy(() => import('../pages/Contact.tsx'))
@@ -24,5 +25,5 @@ const MediaCentre = lazy(() => import('../pages/MediaCentre.tsx'))
 const NotFound = lazy(() => import('../pages/NotFound.tsx'))
 
 export function AppRoutes() {
-  return <Suspense fallback={<RouteLoader />}><Routes><Route path="/demohome" element={<DemoHome />} /><Route element={<AppShell />}><Route path="/" element={<Home />} /><Route path="/about" element={<About />} /><Route path="/founder" element={<Founder />} /><Route path="/vision-mission" element={<VisionMission />} /><Route path="/history" element={<History />} /><Route path="/leadership" element={<Leadership />} /><Route path="/join" element={<Join />} /><Route path="/news" element={<News />} /><Route path="/news/:newsId" element={<NewsDetail />} /><Route path="/events" element={<Events />} /><Route path="/gallery" element={<Gallery />} /><Route path="/manifesto" element={<Manifesto />} /><Route path="/public-issues" element={<PublicIssues />} /><Route path="/donate" element={<Donate />} /><Route path="/contact" element={<Contact />} /><Route path="/offices" element={<Offices />} /><Route path="/media-centre" element={<MediaCentre />} /><Route path="/404" element={<NotFound />} /><Route path="*" element={<Navigate to="/404" replace />} /></Route></Routes></Suspense>
+  return <Suspense fallback={<RouteLoader />}><Routes><Route path="/demohome" element={<DemoHome />} /><Route element={<AppShell />}><Route path="/" element={<Home />} /><Route path="/about" element={<About />} /><Route path="/founder" element={<Founder />} /><Route path="/vision-mission" element={<VisionMission />} /><Route path="/history" element={<History />} /><Route path="/leadership" element={<Leadership />} /><Route path="/join" element={<Join />} /><Route path="/news" element={<News />} /><Route path="/news/:newsId" element={<NewsDetail />} /><Route path="/events" element={<Events />} /><Route path="/gallery" element={<Gallery />} /><Route path="/manifesto" element={<Manifesto />} /><Route path="/sankalp-patra" element={<SankalpPatra />} /><Route path="/public-issues" element={<PublicIssues />} /><Route path="/donate" element={<Donate />} /><Route path="/contact" element={<Contact />} /><Route path="/offices" element={<Offices />} /><Route path="/media-centre" element={<MediaCentre />} /><Route path="/404" element={<NotFound />} /><Route path="*" element={<Navigate to="/404" replace />} /></Route></Routes></Suspense>
 }

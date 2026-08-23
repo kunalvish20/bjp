@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react'
-import { Building2, CalendarDays, Eye, Handshake, HeartHandshake, Images, Newspaper, PhoneCall, UserPlus, UsersRound } from 'lucide-react'
+import { Building2, CalendarDays, Eye, FileText, Handshake, HeartHandshake, Images, Newspaper, PhoneCall, UserPlus, UsersRound } from 'lucide-react'
 
 export interface HomeImage {
   src: string
@@ -76,6 +76,7 @@ export const heroSlides: HeroSlide[] = [
 
 export const quickActions: QuickAction[] = [
   { label: 'About Party', hindi: 'हमारे बारे में', to: '/about', icon: UsersRound },
+  { label: 'Sankalp Patra', hindi: 'संकल्प पत्र', to: '/sankalp-patra', icon: FileText },
   { label: 'Vision & Mission', hindi: 'दृष्टि और मिशन', to: '/vision-mission', icon: Eye },
   { label: 'Leadership', hindi: 'नेतृत्व', to: '/leadership', icon: Handshake },
   { label: 'Join our Party', hindi: 'पार्टी से जुड़ें', to: '/join', icon: UserPlus },

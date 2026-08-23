@@ -10,21 +10,21 @@ export function HomeHero() {
 
   return (
     <section className="relative overflow-hidden bg-party-forest text-white" aria-label="Bharatiya Mitra Party campaign highlights">
-      <picture className="absolute inset-0">
+      <picture className="relative block h-[25rem] sm:absolute sm:inset-0 sm:h-auto">
         <source media="(max-width: 639px)" srcSet="/Bmp.png" />
         <img src="/Banner_image.png" alt="Bharatiya Mitra Party banner" width="1800" height="900" className="h-full w-full object-cover object-top" />
       </picture>
-      <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(0,60,36,0.32)_0%,rgba(0,60,36,0.2)_48%,rgba(0,60,36,0.5)_100%)] sm:hidden" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[25rem] bg-[linear-gradient(180deg,rgba(0,60,36,0.06)_0%,rgba(0,60,36,0.02)_48%,rgba(0,60,36,0.74)_100%)] sm:hidden" />
       <div className="pointer-events-none absolute inset-0 z-10 hidden bg-[linear-gradient(90deg,rgba(0,60,36,0.96)_0%,rgba(0,60,36,0.78)_45%,rgba(0,60,36,0.2)_100%)] sm:block" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-44 bg-gradient-to-t from-party-forest/45 to-transparent sm:from-party-forest/80" />
-      <div className="page-container relative z-20 flex min-h-[36rem] flex-col justify-end pb-7 pt-36 sm:min-h-[39rem] sm:pb-16 sm:pt-28">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 hidden h-44 bg-gradient-to-t from-party-forest/80 to-transparent sm:block" />
+      <div className="page-container relative z-20 flex flex-col justify-end bg-party-forest pb-8 pt-6 sm:min-h-[39rem] sm:bg-transparent sm:pb-16 sm:pt-28">
         <Reveal className="max-w-2xl">
-          <span className="eyebrow text-white">{slide.kicker}</span>
-          <h1 data-bilingual-skip="true" className="mt-4 max-w-[18rem] font-body text-[clamp(2.25rem,12vw,3.6rem)] font-black leading-[0.96] tracking-normal drop-shadow-[0_3px_12px_rgba(0,0,0,0.28)] sm:mt-5 sm:max-w-2xl sm:text-7xl lg:text-[5.7rem]">
+          <span className="eyebrow text-white/90">{slide.kicker}</span>
+          <h1 data-bilingual-skip="true" className="mt-4 max-w-[21rem] font-body text-[clamp(2.35rem,11vw,3.15rem)] font-black leading-[0.98] tracking-normal drop-shadow-[0_3px_12px_rgba(0,0,0,0.18)] sm:mt-5 sm:max-w-2xl sm:text-7xl lg:text-[5.7rem]">
             <span className="block">Together for Development &amp; Unity</span>
             <span lang="hi" className="mt-3 block font-display text-[0.58em] font-bold leading-[1.08] text-party-saffron sm:mt-4">विकास और एकता के लिए साथ मिलकर</span>
           </h1>
-          <p className="mt-5 max-w-lg text-base font-bold leading-7 text-white/80 sm:text-lg">{slide.description}</p>
+          <p className="mt-4 max-w-lg text-sm font-bold leading-6 text-white/78 sm:mt-5 sm:text-lg sm:leading-7">{slide.description}</p>
           <div className="mt-7 flex flex-wrap gap-3"><ButtonLink to="/join" icon={undefined}>Join Our Party</ButtonLink><ButtonLink to="/donate" variant="outline" icon={undefined}>Fund Our Party</ButtonLink></div>
         </Reveal>
       </div>
@@ -46,7 +46,7 @@ export function QuickActions() {
           })}
         </div>
       </div>
-      <div className="page-container hidden sm:grid sm:grid-cols-4 sm:divide-x sm:divide-y sm:divide-party-line lg:grid-cols-8 lg:divide-y-0">
+      <div className="page-container hidden sm:grid sm:grid-cols-3 sm:divide-x sm:divide-y sm:divide-party-line lg:grid-cols-9 lg:divide-y-0">
         {quickActions.map(({ label, hindi, to, icon: Icon }) => <Link key={label} to={to} className="group flex flex-col items-center justify-center gap-2 px-3 py-4 text-center transition duration-200 hover:bg-party-cream"><span className="flex h-10 w-10 items-center justify-center rounded-full bg-party-cream text-party-green transition group-hover:bg-party-saffron group-hover:text-white"><Icon aria-hidden="true" size={21} strokeWidth={1.8} /></span><span className="text-[0.68rem] font-black leading-tight text-party-forest">{label}<span lang="hi" className="ml-1 inline text-[0.9em] font-medium text-party-ink/55">/ {hindi}</span></span></Link>)}
       </div>
     </section>
@@ -146,7 +146,54 @@ export function ImpactSection() {
 
 export function ExploreSection() {
   return (
-    <section className="bg-party-cream py-16 sm:py-20"><div className="page-container"><div className="mb-8 flex items-end justify-between gap-4"><div><span className="eyebrow">Explore more / और जानें</span><h2 className="display-heading mt-3 text-3xl font-bold text-party-forest sm:text-4xl">Be a part of the change</h2></div><Link to="/about" className="hidden text-xs font-black text-party-green sm:inline-flex">Explore all <ArrowUpRight size={15} className="ml-1" /></Link></div><div data-bilingual-skip="true" className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">{exploreCards.map((item, index) => <Link key={item.title} to={item.to} className={`group overflow-hidden border border-party-line bg-white ${index === 0 ? 'sm:col-span-2 lg:col-span-2' : ''}`}><LazyImage src={item.image.src} alt={item.image.alt} width="800" height="560" wrapperClassName="aspect-[1.35]" className="group-hover:scale-105" /><div className="p-3"><p className="text-sm font-black leading-tight text-party-forest group-hover:text-party-saffron">{item.title}<span lang="hi" className="ml-1 text-[0.9em] font-medium text-party-ink/55">/ {item.hindi}</span></p></div></Link>)}</div></div></section>
+    <section className="bg-party-cream py-14 sm:py-16 lg:py-20">
+      <div className="page-container">
+        <div className="mb-7 flex items-end justify-between gap-4 lg:mb-9">
+          <div className="min-w-0">
+            <span className="eyebrow">Explore more / और जानें</span>
+            <h2 className="display-heading mt-3 text-3xl font-bold leading-tight text-party-forest sm:text-4xl lg:text-[2.65rem]">Be a part of the change</h2>
+          </div>
+          <Link to="/about" className="hidden shrink-0 items-center gap-1 text-xs font-black text-party-green transition hover:text-party-saffron sm:inline-flex">
+            Explore all <ArrowUpRight size={15} />
+          </Link>
+        </div>
+        <div data-bilingual-skip="true" className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-[minmax(18rem,2fr)_repeat(5,minmax(0,1fr))] lg:items-start lg:gap-4">
+          {exploreCards.map((item, index) => {
+            const featured = index === 0
+
+            return (
+              <Link
+                key={item.title}
+                to={item.to}
+                className={`group flex overflow-hidden border border-party-line bg-white shadow-[0_5px_16px_rgba(0,60,36,0.055)] transition duration-200 hover:-translate-y-1 hover:border-party-green/35 hover:shadow-civic-soft ${featured ? 'sm:col-span-2 lg:col-span-1' : ''}`}
+              >
+                <div className="flex w-full flex-col">
+                  <LazyImage
+                    src={item.image.src}
+                    alt={item.image.alt}
+                    width="800"
+                    height="560"
+                    wrapperClassName={`aspect-[1.35] ${featured ? 'lg:aspect-[1.18]' : 'lg:aspect-[1.08]'}`}
+                    className="group-hover:scale-105"
+                  />
+                  <div className="flex min-h-[5.25rem] flex-1 flex-col justify-between p-3 lg:min-h-[6.25rem] lg:p-3.5">
+                    <p className="text-sm font-black leading-tight text-party-forest transition group-hover:text-party-saffron">
+                      {item.title}
+                      <span lang="hi" className="mt-1 block text-[0.88em] font-medium leading-snug text-party-ink/55">
+                        / {item.hindi}
+                      </span>
+                    </p>
+                    <span className="mt-3 hidden items-center gap-1 text-[0.58rem] font-black uppercase tracking-[0.08em] text-party-saffron lg:inline-flex">
+                      Explore <ArrowUpRight size={12} />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
+      </div>
+    </section>
   )
 }
 
