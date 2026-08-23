@@ -47,10 +47,10 @@ export const policyPillars: PolicyPillar[] = [
 ]
 
 export const offices: Office[] = [
-  { id: 'o1', name: 'National Office', type: 'National Office', region: 'New Delhi', address: '14, Jantar Mantar Road, New Delhi 110001', phone: '+91 11 4100 2088', email: 'hello@janawaaz.in' },
-  { id: 'o2', name: 'Karnataka State Office', type: 'State Office', region: 'Bengaluru', address: '22, Residency Road, Bengaluru 560025', phone: '+91 80 4612 0707', email: 'karnataka@janawaaz.in' },
-  { id: 'o3', name: 'Maharashtra State Office', type: 'State Office', region: 'Pune', address: '7, Senapati Bapat Road, Pune 411016', phone: '+91 20 6811 1212', email: 'maharashtra@janawaaz.in' },
-  { id: 'o4', name: 'Jaipur District Office', type: 'District Office', region: 'Jaipur', address: '4, Civil Lines Extension, Jaipur 302006', phone: '+91 141 490 4411', email: 'jaipur@janawaaz.in' },
+  { id: 'o1', name: 'National Office', type: 'National Office', region: 'New Delhi', address: '14, Jantar Mantar Road, New Delhi 110001', phone: '+91 11 4100 2088', email: 'bhartiyamitrapartybmp@gmail.com' },
+  { id: 'o2', name: 'Karnataka State Office', type: 'State Office', region: 'Bengaluru', address: '22, Residency Road, Bengaluru 560025', phone: '+91 80 4612 0707', email: 'bhartiyamitrapartybmp@gmail.com' },
+  { id: 'o3', name: 'Maharashtra State Office', type: 'State Office', region: 'Pune', address: '7, Senapati Bapat Road, Pune 411016', phone: '+91 20 6811 1212', email: 'bhartiyamitrapartybmp@gmail.com' },
+  { id: 'o4', name: 'Jaipur District Office', type: 'District Office', region: 'Jaipur', address: '4, Civil Lines Extension, Jaipur 302006', phone: '+91 141 490 4411', email: 'bhartiyamitrapartybmp@gmail.com' },
 ]
 
 export const faqs = [
