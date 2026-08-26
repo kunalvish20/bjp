@@ -9,6 +9,57 @@ import { NotFoundContent } from './NotFound.tsx'
 export default function NewsDetail() {
   const { newsId } = useParams()
   const item = newsItems.find((news) => news.id === newsId)
+
   if (!item) return <NotFoundContent />
-  return <><SEO title={item.title} description={item.excerpt} path={`/news/${item.id}`} /><article className="bg-civic-white pb-20 pt-36 md:pb-28 md:pt-44"><div className="page-container"><Link to="/news" className="inline-flex items-center gap-2 text-sm font-bold text-movement-navy hover:text-blaze-orange"><ArrowLeft size={16} />Back to newsroom</Link><div className="mt-9 grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-end"><div><span className="eyebrow">{item.category}</span><h1 className="display-heading mt-5 text-5xl font-bold leading-[0.96] text-movement-navy sm:text-7xl">{item.title}</h1><div className="mt-6 flex items-center gap-4 text-sm text-slate"><span>{formatEventDate(item.date)}</span><span className="h-1 w-1 rounded-full bg-blaze-orange" /><span className="inline-flex items-center gap-2"><Clock3 size={15} />{item.readTime}</span></div></div><p className="max-w-xl text-xl leading-8 text-slate">{item.excerpt}</p></div><LazyImage src={item.image.src} alt={item.image.alt} wrapperClassName="mt-12 aspect-[16/8] rounded-3xl" /></div><div className="page-container mt-12 grid gap-10 lg:grid-cols-[0.7fr_1.3fr]"><aside className="h-fit rounded-3xl border border-border bg-white p-6 lg:sticky lg:top-28"><p className="text-xs font-bold uppercase tracking-[0.15em] text-slate">Share this story</p><div className="mt-4 flex flex-wrap gap-2"><a href="https://www.linkedin.com" className="rounded-full bg-mist px-4 py-2 text-sm font-bold text-movement-navy">LinkedIn</a><a href="https://www.facebook.com" className="rounded-full bg-mist px-4 py-2 text-sm font-bold text-movement-navy">Facebook</a></div></aside><div className="prose prose-lg max-w-3xl text-slate"><p>Public work is often described through its outcomes: a new programme, a new law, a new promise. But the more important story is the practice beneath the outcome — who was listened to, what was made visible, and whether people could recognise themselves in the decision.</p><p>At Jan Awaaz, our field teams are trained to start with questions. We sit with residents, workers, teachers, and small business owners to understand where a system breaks down in ordinary life. Those conversations become issue notes, experiments, and commitments that the public can inspect.</p><blockquote className="display-heading my-10 border-l-4 border-blaze-orange pl-6 text-3xl font-bold leading-tight text-movement-navy">The best policy is not the most impressive on paper. It is the one that makes Tuesday easier.</blockquote><p>That is why our newsroom shares more than announcements. It shares the work in progress, the evidence behind a decision, and the places where we still need to learn.</p><Link to="/join" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-movement-navy underline decoration-blaze-orange decoration-2 underline-offset-8">Add your voice to the work <ArrowUpRight size={16} /></Link></div></div></article></>
+
+  return (
+    <>
+      <SEO title={item.title} description={item.excerpt} path={`/news/${item.id}`} />
+      <article className="bg-civic-white pb-20 pt-36 md:pb-28 md:pt-44">
+        <div className="page-container">
+          <Link to="/news" className="inline-flex items-center gap-2 text-sm font-bold text-movement-navy hover:text-blaze-orange">
+            <ArrowLeft size={16} />Back to newsroom
+          </Link>
+          <div className="mt-9 grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+            <div>
+              <span className="eyebrow">{item.category}</span>
+              <h1 className="display-heading mt-5 text-5xl font-bold leading-[0.96] text-movement-navy sm:text-7xl">{item.title}</h1>
+              <div className="mt-6 flex items-center gap-4 text-sm text-slate">
+                <span>{formatEventDate(item.date)}</span>
+                <span className="h-1 w-1 rounded-full bg-blaze-orange" />
+                <span className="inline-flex items-center gap-2"><Clock3 size={15} />{item.readTime}</span>
+              </div>
+            </div>
+            <p className="max-w-xl text-xl leading-8 text-slate">{item.excerpt}</p>
+          </div>
+          <LazyImage src={item.image.src} alt={item.image.alt} wrapperClassName="mt-12 aspect-[16/8] rounded-3xl" />
+        </div>
+
+        <div className="page-container mt-12 grid gap-10 lg:grid-cols-[0.7fr_1.3fr]">
+          <aside className="h-fit rounded-3xl border border-border bg-white p-6 lg:sticky lg:top-28">
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-slate">Share this story</p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <a href="https://www.instagram.com/bhartiyamitraparty?igsi=aHZjYjM0NHZqOWxh" target="_blank" rel="noreferrer" className="rounded-full bg-mist px-4 py-2 text-sm font-bold text-movement-navy">Instagram</a>
+              <a href="https://www.facebook.com/share/1P1ko7Hh9T/" target="_blank" rel="noreferrer" className="rounded-full bg-mist px-4 py-2 text-sm font-bold text-movement-navy">Facebook</a>
+            </div>
+          </aside>
+          <div className="prose prose-lg max-w-3xl text-slate">
+            <p>
+              Public work is often described through its outcomes: a new programme, a new law, a new promise. But the more important story is the practice beneath the outcome: who was listened to, what was made visible, and whether people could recognise themselves in the decision.
+            </p>
+            <p>
+              At Bharatiya Mitra Party, our field teams are trained to start with questions. We sit with residents, workers, teachers, and small business owners to understand where a system breaks down in ordinary life. Those conversations become issue notes, experiments, and commitments that the public can inspect.
+            </p>
+            <blockquote className="display-heading my-10 border-l-4 border-blaze-orange pl-6 text-3xl font-bold leading-tight text-movement-navy">
+              The best policy is not the most impressive on paper. It is the one that makes Tuesday easier.
+            </blockquote>
+            <p>That is why our newsroom shares more than announcements. It shares the work in progress, the evidence behind a decision, and the places where we still need to learn.</p>
+            <Link to="/join" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-movement-navy underline decoration-blaze-orange decoration-2 underline-offset-8">
+              Add your voice to the work <ArrowUpRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </article>
+    </>
+  )
 }

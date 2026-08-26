@@ -44,7 +44,7 @@ export function DonationForm() {
           <p className="mt-2 max-w-[240px] text-center text-sm leading-6 text-slate">Open any UPI app like GPay, PhonePe, or Paytm and scan this code.</p>
           <div className="mt-6 flex w-full max-w-[280px] flex-col items-center justify-center gap-1 rounded-2xl bg-orange-50 py-4 px-6 border border-orange-100/50">
              <span className="text-[0.65rem] font-bold uppercase tracking-wider text-blaze-orange">Or use UPI ID</span>
-             <span className="font-mono text-base font-bold text-movement-navy">janawaaz@upi</span>
+             <span className="font-mono text-base font-bold text-movement-navy">bhartiyamitraparty@upi</span>
           </div>
         </div>
       )}

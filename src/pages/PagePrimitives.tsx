@@ -5,7 +5,7 @@ import { PageHero } from '../components/ui/PageHero.tsx'
 import { Reveal } from '../components/ui/Reveal.tsx'
 
 export function PageIntro({ eyebrow, title, description, image }: { eyebrow: string; title: string; description: string; image?: string }) {
-  return <PageHero eyebrow={eyebrow} title={title} description={description} image={image} imageAlt="Jan Awaaz civic movement" breadcrumbs={[{ label: 'Home', to: '/' }, { label: title }]} />
+  return <PageHero eyebrow={eyebrow} title={title} description={description} image={image} imageAlt="Bharatiya Mitra Party civic movement" breadcrumbs={[{ label: 'Home', to: '/' }, { label: title }]} />
 }
 
 export function ContentBand({ eyebrow, title, children, dark = false }: { eyebrow: string; title: string; children: ReactNode; dark?: boolean }) {

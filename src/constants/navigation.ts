@@ -1,7 +1,7 @@
 export const primaryNav = [
-  { label: 'Home', to: '/', children: [{ label: 'Overview', to: '/' }] },
-  { label: 'Bharatiya Mitra Party', to: '/about', children: [{ label: 'About the party', to: '/about' }, { label: 'Our history', to: '/history' }] },
+  { label: 'Home', to: '/', children: [] },
   { label: 'Sankalp Patra', to: '/sankalp-patra', children: [] },
+  { label: 'Bharatiya Mitra Party', to: '/about', children: [{ label: 'About the party', to: '/about' }, { label: 'Our history', to: '/history' }] },
   { label: 'Vision & Mission', to: '/vision-mission', children: [{ label: 'Vision & mission', to: '/vision-mission' }, { label: 'Manifesto', to: '/manifesto' }] },
   { label: 'Leadership', to: '/leadership', children: [{ label: 'National president', to: '/founder' }, { label: 'Our leadership', to: '/leadership' }] },
   { label: 'Join Us', to: '/join', children: [{ label: 'Join the party', to: '/join' }, { label: 'Volunteer', to: '/join' }] },

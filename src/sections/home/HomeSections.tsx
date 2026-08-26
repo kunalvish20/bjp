@@ -11,8 +11,8 @@ export function HomeHero() {
   return (
     <section className="relative overflow-hidden bg-party-forest text-white" aria-label="Bharatiya Mitra Party campaign highlights">
       <picture className="relative block h-[25rem] sm:absolute sm:inset-0 sm:h-auto">
-        <source media="(max-width: 639px)" srcSet="/Bmp.png" />
-        <img src="/Banner_image.png" alt="Bharatiya Mitra Party banner" width="1800" height="900" className="h-full w-full object-cover object-top" />
+        <source media="(max-width: 639px)" srcSet="/Bmp-640.jpg 640w, /Bmp-960.jpg 960w, /Bmp.jpg 1254w" sizes="100vw" />
+        <img src="/Banner_image-1280.jpg" srcSet="/Banner_image-960.jpg 960w, /Banner_image-1280.jpg 1280w, /Banner_image.jpg 1691w" sizes="100vw" alt="Bharatiya Mitra Party banner" width="1691" height="930" loading="eager" decoding="async" fetchPriority="high" className="h-full w-full object-cover object-top" />
       </picture>
       <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[25rem] bg-[linear-gradient(180deg,rgba(0,60,36,0.06)_0%,rgba(0,60,36,0.02)_48%,rgba(0,60,36,0.74)_100%)] sm:hidden" />
       <div className="pointer-events-none absolute inset-0 z-10 hidden bg-[linear-gradient(90deg,rgba(0,60,36,0.96)_0%,rgba(0,60,36,0.78)_45%,rgba(0,60,36,0.2)_100%)] sm:block" />
@@ -22,7 +22,7 @@ export function HomeHero() {
           <span className="eyebrow text-white/90">{slide.kicker}</span>
           <h1 data-bilingual-skip="true" className="mt-4 max-w-[21rem] font-body text-[clamp(2.35rem,11vw,3.15rem)] font-black leading-[0.98] tracking-normal drop-shadow-[0_3px_12px_rgba(0,0,0,0.18)] sm:mt-5 sm:max-w-2xl sm:text-7xl lg:text-[5.7rem]">
             <span className="block">Together for Development &amp; Unity</span>
-            <span lang="hi" className="mt-3 block font-display text-[0.58em] font-bold leading-[1.08] text-party-saffron sm:mt-4">विकास और एकता के लिए साथ मिलकर</span>
+            <span lang="hi" className="mt-3 block font-display text-[0.58em] font-bold leading-[1.08] text-party-saffron sm:mt-4">विकास और एकता के लिए साथ मिलकर, बदलाव की ओर बढ़ें</span>
           </h1>
           <p className="mt-4 max-w-lg text-sm font-bold leading-6 text-white/78 sm:mt-5 sm:text-lg sm:leading-7">{slide.description}</p>
           <div className="mt-7 flex flex-wrap gap-3"><ButtonLink to="/join" icon={undefined}>Join Our Party</ButtonLink><ButtonLink to="/donate" variant="outline" icon={undefined}>Fund Our Party</ButtonLink></div>

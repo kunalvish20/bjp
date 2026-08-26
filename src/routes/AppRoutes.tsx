@@ -2,8 +2,8 @@ import { lazy, Suspense } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell.tsx'
 import { RouteLoader } from './RouteLoader.tsx'
+import Home from '../pages/Home.tsx'
 
-const Home = lazy(() => import('../pages/Home.tsx'))
 const DemoHome = lazy(() => import('../pages/demohome.jsx'))
 const About = lazy(() => import('../pages/About.tsx'))
 const Founder = lazy(() => import('../pages/Founder.tsx'))

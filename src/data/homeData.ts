@@ -87,7 +87,7 @@ export const quickActions: QuickAction[] = [
 ]
 
 export const presidentImage: HomeImage = {
-  src: '/confrence.png',
+  src: '/confrence.jpg',
   alt: 'Bharatiya Mitra Party conference gathering',
 }
 
