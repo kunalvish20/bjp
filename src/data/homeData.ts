@@ -1,5 +1,17 @@
 import type { LucideIcon } from 'lucide-react'
-import { Building2, CalendarDays, Eye, FileText, Handshake, HeartHandshake, Images, Newspaper, PhoneCall, UserPlus, UsersRound } from 'lucide-react'
+import {
+  Building2,
+  CalendarDays,
+  Eye,
+  FileText,
+  Handshake,
+  HeartHandshake,
+  Images,
+  Newspaper,
+  PhoneCall,
+  UserPlus,
+  UsersRound,
+} from 'lucide-react'
 
 export interface HomeImage {
   src: string
@@ -87,21 +99,21 @@ export const quickActions: QuickAction[] = [
 ]
 
 export const presidentImage: HomeImage = {
-  src: '/confrence.jpg',
-  alt: 'Bharatiya Mitra Party conference gathering',
+  src: '/Hero-image.png',
+  alt: 'Bharatiya Mitra Party leader greeting with folded hands',
 }
 
 export const homeUpdates: HomeUpdate[] = [
   {
-    title: 'Bharatiya Mitra Party launches a new chapter for public service',
-    hindi: 'देश की सेवा, जन-जन के साथ',
-    date: 'May 12, 2026',
+    title: 'AAP Delhi: Welfare Promise Faces Funding and Rollout Questions',
+    hindi: 'AAP दिल्ली: कल्याणकारी वादे पर फंडिंग और अमल के सवाल',
+    date: '2026-08-29',
     type: 'Latest News',
     image: {
-      src: 'https://images.pexels.com/photos/16136353/pexels-photo-16136353.jpeg?auto=compress&cs=tinysrgb&w=900',
-      alt: 'Sandeep Kashyap on Pexels - people gathering with Indian flags',
+      src: '/AAP Delhi Welfare.webp',
+      alt: 'Illustrative image for the AAP Delhi welfare funding explainer',
     },
-    to: '/news',
+    to: '/news/n1',
   },
   {
     title: 'National conference on development and unity',
@@ -126,6 +138,11 @@ export const homeUpdates: HomeUpdate[] = [
     to: '/gallery',
   },
 ]
+
+const originalLatestNewsImage: HomeImage = {
+  src: '/image11.png',
+  alt: 'Public gathering with a Hindi unity, progress, and public service placard',
+}
 
 export const exploreCards: ExploreCard[] = [
   {
@@ -185,7 +202,7 @@ export const exploreCards: ExploreCard[] = [
 ]
 
 export const galleryImages: HomeImage[] = [
-  homeUpdates[0].image,
+  originalLatestNewsImage,
   exploreCards[0].image,
   exploreCards[1].image,
   exploreCards[2].image,
@@ -197,6 +214,6 @@ export const galleryImages: HomeImage[] = [
 export const impactStats = [
   { value: '25+', label: 'Years of Trust', icon: HeartHandshake },
   { value: '500+', label: 'Events Organized', icon: CalendarDays },
-  { value: '1M+', label: 'People Connected', icon: UsersRound },
+  { value: '10+', label: 'People Connected', icon: UsersRound },
   { value: '28', label: 'States Represented', icon: Building2 },
 ]

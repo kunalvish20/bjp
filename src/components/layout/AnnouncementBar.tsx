@@ -1,4 +1,5 @@
-import { Facebook, Instagram } from 'lucide-react'
+import { Facebook, Instagram, Youtube } from 'lucide-react'
+import { FaXTwitter } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 
 export function AnnouncementBar() {
@@ -10,6 +11,8 @@ export function AnnouncementBar() {
           <span className="hidden text-white/60 sm:inline">Follow Us:</span>
           <a href="https://www.facebook.com/share/1P1ko7Hh9T/" target="_blank" rel="noreferrer" aria-label="Facebook" className="text-white/75 transition hover:text-party-saffron"><Facebook size={12} /></a>
           <a href="https://www.instagram.com/bhartiyamitraparty?igsi=aHZjYjM0NHZqOWxh" target="_blank" rel="noreferrer" aria-label="Instagram" className="text-white/75 transition hover:text-party-saffron"><Instagram size={12} /></a>
+          <a href="https://x.com/DhaneshwarBMP" target="_blank" rel="noreferrer" aria-label="X" className="text-white/75 transition hover:text-party-saffron"><FaXTwitter size={12} /></a>
+          <a href="https://youtube.com/@bhartiyamitrapartybmp?si=7qfx77PMcBgPv7nT" target="_blank" rel="noreferrer" aria-label="YouTube" className="text-white/75 transition hover:text-party-saffron"><Youtube size={12} /></a>
           <Link to="/contact" className="hidden border-l border-white/20 pl-3 text-white/80 hover:text-party-saffron sm:inline">हिंदी / English</Link>
         </div>
       </div>

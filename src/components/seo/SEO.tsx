@@ -6,6 +6,8 @@ const logoUrl = `${siteUrl}/Logo_bmp.webp`
 const socialLinks = [
   'https://www.facebook.com/share/1P1ko7Hh9T/',
   'https://www.instagram.com/bhartiyamitraparty?igsi=aHZjYjM0NHZqOWxh',
+  'https://x.com/DhaneshwarBMP',
+  'https://youtube.com/@bhartiyamitrapartybmp?si=7qfx77PMcBgPv7nT',
 ]
 const seoHindi: Record<string, string> = {
   'Together for Development & Unity': 'विकास और एकता के लिए साथ',

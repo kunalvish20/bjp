@@ -7,11 +7,21 @@ export interface ImageAsset {
 export interface NewsItem {
   id: string
   title: string
+  titleHi: string
   excerpt: string
+  excerptHi: string
   date: string
   category: NewsCategory
   image: ImageAsset
   readTime: string
+  body: {
+    en: string
+    hi: string
+  }[]
+  sources: {
+    label: string
+    url: string
+  }[]
 }
 
 export interface EventItem {
@@ -57,7 +67,7 @@ export interface PolicyPillar {
   color: string
 }
 
-export type NewsCategory = 'All' | 'Movement' | 'Policy' | 'Community' | 'Media'
+export type NewsCategory = 'All' | 'Governance' | 'National' | 'Alliance'
 export type TeamGroup = 'Founder' | 'National Team' | 'State Team' | 'District Team' | 'Youth Wing'
 export type OfficeType = 'National Office' | 'State Office' | 'District Office'
 export type FormStatus = 'idle' | 'submitting' | 'success' | 'error'
