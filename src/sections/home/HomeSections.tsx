@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ButtonLink } from '../../components/ui/Button.tsx'
 import { LazyImage } from '../../components/ui/LazyImage.tsx'
 import { Reveal } from '../../components/ui/Reveal.tsx'
-import { exploreCards, galleryImages, heroSlides, homeUpdates, impactStats, quickActions } from '../../data/homeData.ts'
+import { exploreCards, heroSlides, homeUpdates, impactStats, quickActions } from '../../data/homeData.ts'
 
 export function HomeHero() {
   const slide = heroSlides[0]
@@ -95,7 +95,7 @@ export function QuickActions() {
           })}
         </div>
       </div>
-      <div className="page-container hidden sm:grid sm:grid-cols-3 sm:divide-x sm:divide-y sm:divide-party-line lg:grid-cols-9 lg:divide-y-0">
+      <div className="page-container hidden sm:grid sm:grid-cols-3 sm:divide-x sm:divide-y sm:divide-party-line lg:grid-cols-8 lg:divide-y-0">
         {quickActions.map(({ label, hindi, to, icon: Icon }) => (
           <Link
             key={label}
@@ -217,10 +217,9 @@ export function UpdatesSection() {
             View All <ArrowUpRight size={15} />
           </Link>
         </div>
-        <div className="grid gap-5 lg:grid-cols-[1fr_1fr_1.05fr]">
+        <div className="grid gap-5 lg:grid-cols-2">
           <UpdateColumn title="Latest News" hindi="ताज़ा समाचार" item={homeUpdates[0]} viewAllTo="/news" />
           <UpdateColumn title="Upcoming Events" hindi="आगामी कार्यक्रम" item={homeUpdates[1]} />
-          <UpdateColumn title="Gallery" hindi="फोटो गैलरी" item={homeUpdates[2]} />
         </div>
       </div>
     </section>
@@ -433,46 +432,6 @@ export function ExploreSection() {
               </Link>
             )
           })}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-export function GallerySection() {
-  return (
-    <section className="bg-white py-14 sm:py-16">
-      <div className="page-container">
-        <div className="mb-6 flex items-end justify-between gap-4">
-          <div>
-            <span className="eyebrow">In the field / मैदान में</span>
-            <h2 className="display-heading mt-3 text-3xl font-bold text-party-forest">People. Purpose. Progress.</h2>
-          </div>
-          <Link to="/gallery" className="hidden items-center gap-1 text-xs font-black text-party-green sm:inline-flex">
-            View Gallery <ArrowUpRight size={15} />
-          </Link>
-        </div>
-        <div className="no-scrollbar flex gap-2 overflow-x-auto pb-2">
-          {galleryImages.map((image, index) => (
-            <Link
-              key={`${image.src}-${index}`}
-              to="/gallery"
-              className="group relative block h-32 min-w-[10rem] overflow-hidden sm:h-40 sm:min-w-[13rem]"
-            >
-              <LazyImage
-                src={image.src}
-                alt={image.alt}
-                width="900"
-                height="600"
-                wrapperClassName="absolute inset-0"
-                className="group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-party-forest/70 to-transparent" />
-              <span className="absolute bottom-2 left-2 text-[0.62rem] font-black text-white">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-            </Link>
-          ))}
         </div>
       </div>
     </section>

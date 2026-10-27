@@ -1,5 +1,5 @@
 import { SEO } from '../components/seo/SEO.tsx'
-import { AboutSection, ExploreSection, GallerySection, HomeHero, ImpactSection, JoinCta, PresidentSection, QuickActions, UpdatesSection } from '../sections/home/HomeSections.tsx'
+import { AboutSection, ExploreSection, HomeHero, ImpactSection, JoinCta, PresidentSection, QuickActions, UpdatesSection } from '../sections/home/HomeSections.tsx'
 
 export default function Home() {
   return (
@@ -12,7 +12,6 @@ export default function Home() {
       <PresidentSection />
       <ImpactSection />
       <ExploreSection />
-      <GallerySection />
       <JoinCta />
     </>
   )

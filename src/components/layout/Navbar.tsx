@@ -26,8 +26,6 @@ const navHindi: Record<string, string> = {
   'Join Us': 'हमसे जुड़ें',
   'Join the party': 'पार्टी से जुड़ें',
   Volunteer: 'स्वयंसेवक',
-  Gallery: 'गैलरी',
-  'Photo gallery': 'फोटो गैलरी',
   'Media centre': 'मीडिया केंद्र',
   'News & Media': 'समाचार और मीडिया',
   'News & press': 'समाचार और प्रेस',
