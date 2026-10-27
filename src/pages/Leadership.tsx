@@ -1,15 +1,37 @@
-import { useMemo, useState } from 'react'
-import { SEO } from '../components/seo/SEO.tsx'
-import { PageIntro, ConversionBanner } from './PagePrimitives.tsx'
-import { leaders } from '../data/leadersData.ts'
 import { LeaderCard } from '../components/cards/LeaderCard.tsx'
+import { SEO } from '../components/seo/SEO.tsx'
 import { Reveal } from '../components/ui/Reveal.tsx'
-import type { TeamGroup } from '../types/index.ts'
-
-const groups: (TeamGroup | 'All')[] = ['All', 'Founder', 'National Team', 'State Team', 'District Team', 'Youth Wing']
+import { leaders } from '../data/leadersData.ts'
 
 export default function Leadership() {
-  const [group, setGroup] = useState<TeamGroup | 'All'>('All')
-  const filtered = useMemo(() => group === 'All' ? leaders : leaders.filter((leader) => leader.group === group), [group])
-  return <><SEO title="Party leadership" description="Meet the national, state, district, and youth leaders building Bharatiya Mitra Party." path="/leadership" /><PageIntro eyebrow="Party leadership" title="Many hands. One public responsibility." description="Our teams are built around the work, not the hierarchy. Meet the people organising listening, policy, and action across the country." image="https://images.unsplash.com/photo-1593055473884-966a01abbe03?auto=format&fit=crop&w=1800&q=85" /><section className="bg-civic-white py-20 md:py-28"><div className="page-container"><div className="no-scrollbar flex gap-2 overflow-x-auto pb-8" role="tablist" aria-label="Leadership groups">{groups.map((item) => <button type="button" role="tab" aria-selected={group === item} key={item} onClick={() => setGroup(item)} className={`shrink-0 rounded-full border px-4 py-2 text-sm font-bold ${group === item ? 'border-movement-navy bg-movement-navy text-white' : 'border-border bg-white text-slate hover:border-movement-navy hover:text-movement-navy'}`}>{item}</button>)}</div><div className="grid gap-5 lg:grid-cols-2">{filtered.map((leader, index) => <Reveal key={leader.id} delay={index * 0.04}><LeaderCard leader={leader} /></Reveal>)}</div></div></section><ConversionBanner title="Leadership should keep making room." description="Join a local team, bring a new perspective, and help us make the circle wider." to="/join" label="Join a local team" /></>
+  const founder = leaders[0]
+
+  return (
+    <>
+      <SEO
+        title="Party leadership"
+        description="Meet the founder and national president of Bharatiya Mitra Party."
+        path="/leadership"
+      />
+      <section className="relative overflow-hidden bg-party-forest py-14 text-white sm:py-20 lg:py-24">
+        <div className="pointer-events-none absolute -right-24 -top-32 h-80 w-80 rounded-full border-[3rem] border-white/5 sm:h-[30rem] sm:w-[30rem]" />
+        <div className="page-container relative">
+          <span className="eyebrow text-party-saffron">Leadership / नेतृत्व</span>
+          <h1 className="display-heading mt-5 max-w-3xl text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
+            Leadership rooted in public service.
+          </h1>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+            Meet the founder whose vision guides Bharatiya Mitra Party and its work with communities.
+          </p>
+        </div>
+      </section>
+      <section aria-label="Founder profile" className="bg-party-cream py-10 sm:py-16 lg:py-20">
+        <div className="page-container">
+          <Reveal className="mx-auto max-w-5xl">
+            <LeaderCard leader={founder} />
+          </Reveal>
+        </div>
+      </section>
+    </>
+  )
 }
