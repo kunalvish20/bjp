@@ -1,4 +1,4 @@
-import { ArrowUpRight, Award, BookOpen, Users } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { SEO } from '../components/seo/SEO.tsx'
 import { PageIntro, ContentBand, ConversionBanner } from './PagePrimitives.tsx'
@@ -8,22 +8,16 @@ import { Timeline } from '../components/ui/Timeline.tsx'
 import { LazyImage } from '../components/ui/LazyImage.tsx'
 import { Reveal } from '../components/ui/Reveal.tsx'
 
-const achievements = [
-  { icon: Users, value: '20+', label: 'years in public work' },
-  { icon: BookOpen, value: '36', label: 'policy notes published' },
-  { icon: Award, value: '18k+', label: 'citizen voices gathered' },
-]
-
 export default function Founder() {
   const leader = leaders[0]
 
   return (
     <>
-      <SEO title="Founder & national president" description="Meet Aarav Mehta, the founder and national president of Bharatiya Mitra Party." path="/founder" />
+      <SEO title="Founder & national president" description={`Meet ${leader.name}, the founder and national president of Bharatiya Mitra Party.`} path="/founder" />
       <PageIntro
         eyebrow="Founder & national president"
-        title="Aarav Mehta believes the work is always more important than the applause."
-        description="A public policy researcher, organiser, and student of institutions, Aarav founded Bharatiya Mitra Party to bring citizen experience back to the centre of political decision-making."
+        title={leader.name}
+        description={leader.bio}
         image={leader.image.src}
       />
       <section className="bg-white py-20 md:py-28">
@@ -32,33 +26,19 @@ export default function Founder() {
             <LazyImage src={leader.image.src} alt={leader.image.alt} wrapperClassName="aspect-[4/5] rounded-3xl" className="grayscale" />
           </Reveal>
           <Reveal delay={0.1}>
-            <span className="eyebrow">A note from Aarav</span>
-            <blockquote className="display-heading mt-6 text-4xl font-bold leading-tight text-movement-navy sm:text-5xl">
-              "People do not need politics to be louder. They need it to be closer."
-            </blockquote>
+            <span className="eyebrow">Meet the founder</span>
+            <h2 className="display-heading mt-6 text-4xl font-bold leading-tight text-movement-navy sm:text-5xl">{leader.name}</h2>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate">
-              I started Bharatiya Mitra Party because I have seen what becomes possible when people are treated as co-authors of the public decisions that shape their lives. Our task is to build the habits, teams, and institutions that make that participation real.
+              {leader.bio}
             </p>
             <Link to="/contact" className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-movement-navy underline decoration-blaze-orange decoration-2 underline-offset-8">
-              Write to Aarav <ArrowUpRight size={16} />
+              Get in touch <ArrowUpRight size={16} />
             </Link>
           </Reveal>
         </div>
       </section>
-      <section className="bg-civic-white py-16">
-        <div className="page-container grid gap-4 sm:grid-cols-3">
-          {achievements.map(({ icon: Icon, value, label }) => (
-            <div key={label} className="rounded-3xl border border-border bg-white p-6">
-              <Icon size={24} className="text-blaze-orange" />
-              <p className="display-heading mt-8 text-4xl font-bold text-movement-navy">{value}</p>
-              <p className="mt-2 text-sm font-semibold uppercase tracking-[0.08em] text-slate">{label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-      <ContentBand eyebrow="The work so far" title="A career built around the public question.">
-        <p>Before founding Bharatiya Mitra Party, Aarav worked with city governments, public schools, and worker collectives on projects that made services more accessible and decisions more transparent.</p>
-        <p>He writes and speaks about institutional trust, the craft of public problem-solving, and the need for political organisations to be accountable to the people they claim to represent.</p>
+      <ContentBand eyebrow="The work so far" title="Working with communities.">
+        <p>Bharatiya Mitra Party brings people together around public service, local participation, and accountable leadership.</p>
       </ContentBand>
       <section className="bg-white py-20 md:py-28">
         <div className="page-container grid gap-10 lg:grid-cols-[0.65fr_1.35fr]">

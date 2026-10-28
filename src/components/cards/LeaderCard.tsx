@@ -14,9 +14,20 @@ export function LeaderCard({ leader }: { leader: Leader }) {
           className="object-center"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-party-forest/60 via-transparent to-transparent" />
-        <span className="absolute bottom-5 left-5 rounded-full border border-white/45 bg-party-forest/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-white backdrop-blur-sm sm:bottom-7 sm:left-7">
-          Founder &amp; national president
-        </span>
+        <div
+          data-bilingual-skip
+          className="absolute inset-x-4 bottom-4 flex max-w-sm items-center gap-3 rounded-xl border border-white/20 bg-party-forest/95 px-4 py-3 text-white shadow-lg backdrop-blur-md sm:inset-x-auto sm:bottom-6 sm:left-6 sm:max-w-[calc(100%-3rem)]"
+        >
+          <span className="h-9 w-1 shrink-0 rounded-full bg-party-saffron" aria-hidden="true" />
+          <div className="min-w-0">
+            <span className="block text-[0.68rem] font-extrabold uppercase leading-snug tracking-[0.1em] sm:text-xs">
+              Founder &amp; National President
+            </span>
+            <span lang="hi" className="mt-0.5 block text-xs font-semibold leading-snug text-white/80">
+              संस्थापक और राष्ट्रीय अध्यक्ष
+            </span>
+          </div>
+        </div>
       </div>
       <div className="flex flex-col justify-center p-6 sm:p-10 lg:p-12">
         <span className="eyebrow">Meet the founder</span>

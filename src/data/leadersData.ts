@@ -1,14 +1,14 @@
 import type { GalleryItem, Leader } from '../types/index.ts'
 
 const portraits = {
-  president: { src: 'https://images.unsplash.com/photo-1731419712421-92fdde7e48e4?auto=format&fit=crop&w=900&q=85', alt: 'Joanna SCD on Unsplash — a civic leader speaking to a crowd' },
+  president: { src: '/leader-image.png', alt: 'Dhaneshwar Mahto greeting with folded hands' },
   ananya: { src: 'https://images.unsplash.com/photo-1593055473884-966a01abbe03?auto=format&fit=crop&w=700&q=85', alt: 'Tandem X Visuals on Unsplash — a community advocate holding a placard' },
   kabir: { src: 'https://images.unsplash.com/photo-1561504221-3ad2c77a1c30?auto=format&fit=crop&w=700&q=85', alt: 'ALMIGHTY DUCK on Unsplash — a young organiser at a night gathering' },
   meera: { src: 'https://images.unsplash.com/photo-1773227059334-38d10a9075f2?auto=format&fit=crop&w=700&q=85', alt: 'Age Cymru on Unsplash — a smiling elder meeting a volunteer' },
 }
 
 export const leaders: Leader[] = [
-  { id: 'l1', name: 'Aarav Mehta', role: 'National President & Founder', group: 'Founder', bio: 'A public policy researcher turned organiser, Aarav has spent two decades working with communities to make institutions more useful, open, and humane.', image: portraits.president },
+  { id: 'l1', name: 'Dhaneshwar Mahto', role: 'National President & Founder', group: 'Founder', bio: 'Dhaneshwar Mahto is the founder and national president of Bharatiya Mitra Party.', image: portraits.president },
   { id: 'l2', name: 'Ananya Rao', role: 'National Convenor, Cities', group: 'National Team', bio: 'Ananya leads our urban practice, bringing together local government, design, and the everyday expertise of residents.', image: portraits.ananya },
   { id: 'l3', name: 'Kabir Khan', role: 'National Convenor, Youth', group: 'Youth Wing', bio: 'Kabir works with young people to turn frustration into a practical civic apprenticeship across campuses and neighbourhoods.', image: portraits.kabir },
   { id: 'l4', name: 'Meera Joseph', role: 'State Lead, Kerala', group: 'State Team', bio: 'Meera is a community health organiser who believes that public trust is built one reliable service at a time.', image: portraits.meera },
